@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dünya'nın en iyi çizgi roman sitesi</title>
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+    .carousel-item-img {
+      height: 500px;
+      object-fit: cover;
+    }
+      a {
+        text-decoration: none;
+        color: red;
+      }
+      a:hover {
+        background-color: red;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-danger">
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="https://cdn.discordapp.com/attachments/876883052238889022/980477062286565426/Logo.png" alt="..." height="70"/>
+              </a>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                </ul>
+
+                  <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="keywords">
+                  <button class="btn btn-danger" type="button" id="btnSearch" onclick="searchManga()">Search</button>
+
+              </div>
+            </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner" id="carousel">
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="row">
+            <div class="col" id="cards1">
+
+            </div>
+            <div class="col" id="cards2">
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-4">
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('Fantezi')">Fantezi</button>
+         <button type="button" class="btn btn-danger" onclick="searchTag('Manga')">Manga</button>
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('Komedi')">Komedi</button>
+         <button type="button" class="btn btn-danger" onclick="searchTag('Web Toon')">Web Toon</button>
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('Aksiyon')">Aksiyon</button>
+         <button type="button" class="btn btn-danger" onclick="searchTag('One Shot')">One Shot</button>
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('Korku')">Korku</button>
+         <button type="button" class="btn btn-danger" onclick="searchTag('Romantik')">Romantik</button>
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('İsekai')">İsekai</button>
+         <button type="button" class="btn btn-danger" onclick="searchTag('Spor')">Spor</button>
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('Mecha')">Mecha</button>
+         <button type="button" class="btn btn-danger " onclick="searchTag('Dram')">Dram</button>
+         <button type="button" class="btn btn-danger btn-lg" onclick="searchTag('Macera')">Macera</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      getAllManga();
+
+      var btnSearch = document.querySelector("#btnSearch");
+      btnSearch.addEventListener("keypress", function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            searchManga();
+        }
+    });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
